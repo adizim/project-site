@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root to: "pages#home"
   get 'about', to: "pages#about"
+  get 'contact', to: "pages#contact"
+  get 'apply', to: "pages#apply"
   #resources :projects
   get 'projects', to: "projects#index"
 

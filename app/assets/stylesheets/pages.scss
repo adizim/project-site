@@ -2,4 +2,24 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.home_callout {
+	height: 100%;
+    width: 100%;
+    overflow: hidden;
+	background-image: url(berkeley.jpg);
+	background-size: cover;
+}
+
+.home_text {
+	margin-top: 250px;
+
+	h1 {
+		color: white;
+    	font-size: 36px;
+	}
+}
+
+.project_callout {
+	background-color: lightgrey;
+}
 
