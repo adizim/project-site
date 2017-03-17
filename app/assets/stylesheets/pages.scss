@@ -10,6 +10,7 @@
 	background-size: cover;
 }
 
+
 .home_text {
 	margin-top: 250px;
 
@@ -19,8 +20,28 @@
 	}
 }
 
+.about_callout {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
 .project_callout {
+	padding-top: 100px;
+	padding-bottom: 100px;
 	background-color: lightgrey;
 }
+
+.contact_callout {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.footer_callout {
+	.container {
+		background-color: #333;
+	}
+}
+
+
 
 
