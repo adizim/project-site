@@ -25,7 +25,12 @@
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background-color: lightgrey;
+	background-color: grey;
+	padding: 50px 30px 30px;
+}
+
+h4 {
+	color: white;
 }
 
 html {
@@ -34,6 +39,11 @@ html {
 
 body {
   height: 100%;
+}
+
+ul {
+    list-style:none;
+    padding-left:0;
 }
 
 
