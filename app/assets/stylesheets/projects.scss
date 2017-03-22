@@ -2,21 +2,63 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-@import "sidebar";
+.sidebar {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #a4bdea;
+    border-radius: 5px;
+}
 
-#wrapper {
+.sidebar-group {
+    margin-left: 15px;
+}
+
+.grid {
+    border-style: solid;
+    border-width: 5px;
+    border-color: #a5e573;
+
+}
+
+.square {
+    padding: 10px;
+}
+
+.add-on .input-group-btn > .btn {
+  border-left-width:0;left:-2px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+/* stop the glowing blue shadow */
+.add-on .form-control:focus {
+ box-shadow:none;
+ -webkit-box-shadow:none; 
+ border-color:#cccccc; 
+}
+.form-control{width:20%}
+.navbar-nav > li > a {
+  border-right: 1px solid #ddd;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+.navbar-nav:last-child{ border-right:0}
+/*.wrapper {
     padding-left: 0;
    
 }
 
-#sidebar-wrapper {
-	width: 250px;
+.sidebar-wrapper {
+    width: 250px;
     z-index: 1000;
     position: fixed;
     left: 250px;
-    width: 0px;
+    width: 100px;
     height: 100%;
     margin-left: -250px;
     overflow-y: auto;
     background: #ffffff;
 }
+
+.container {
+    margin-left: 200px;
+}*/
