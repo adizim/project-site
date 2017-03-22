@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.home_callout {
+.home_callout, .about_callout {
 	height: 100%;
     width: 100%;
     overflow: hidden;
@@ -10,8 +10,8 @@
 	background-size: cover;
 }
 
-
-.home_text {
+.home_callout .top,
+.about_callout .top {
 	margin-top: 250px;
 
 	h1 {
@@ -20,26 +20,20 @@
 	}
 }
 
-.about_callout {
+.home_about, .about_mission {
 	padding-top: 100px;
 	padding-bottom: 100px;
 }
 
-.project_callout {
+.home_project {
 	padding-top: 100px;
 	padding-bottom: 100px;
 	background-color: lightgrey;
 }
 
-.contact_callout {
+.home_contact {
 	padding-top: 100px;
 	padding-bottom: 100px;
-}
-
-.footer_callout {
-	.container {
-		background-color: #333;
-	}
 }
 
 
