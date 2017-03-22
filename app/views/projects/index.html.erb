@@ -62,16 +62,18 @@
 		<!-- Grid -->
 			<div class="grid">
 				<div class="row">
-					<div class="col-md-6">
-						<div class="square">
-							<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
-							<h4 class="text-center"> Project </h4>
-							<p> Summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							<p class="text-center"> (Read More) </p>
-							
+					<% @projects.each do |p| %>
+						<div class="col-md-6">
+							<div class="square">
+								<%= image_tag(p.image, :alt => "project", :class => "img-thumbnail") %>
+								<h4 class="text-center"><%= p.title %></h4>
+								<p><%= p.summary %>
+								<%= link_to 'Read more', p.link %></p>
+								</p>
+							</div>
 						</div>
-					</div>
-					<div class="col-md-6">
+					<% end %>
+					<!-- <div class="col-md-6">
 						<div class="square">
 							<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
 							<h4 class="text-center"> Project </h4>
@@ -118,41 +120,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>
 
-
-<!-- Project grid -->
-<!-- <div class="container-fluid">
-	<div class="row">
-		<div class="col-md-4">
-			<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
-			<h4 class="text-center"> Project 1 </h4>
-		</div>
-		<div class="col-md-4">
-			<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
-			<h4 class="text-center"> Project 1 </h4>
-		</div>
-		<div class="col-md-4">
-			<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
-			<h4 class="text-center"> Project 1 </h4>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-4">
-			<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
-			<h4 class="text-center"> Project 1 </h4>
-		</div>
-		<div class="col-md-4">
-			<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
-			<h4 class="text-center"> Project 1 </h4>
-		</div>
-		<div class="col-md-4">
-			<%= image_tag("project-robot-pic", :alt => "project", :class => "img-thumbnail") %>
-			<h4 class="text-center"> Project 1 </h4>
-		</div>
-	</div>
-	
-</div> -->
