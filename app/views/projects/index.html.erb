@@ -1,20 +1,28 @@
 <!-- Project header -->
 <div class="container text-center">
 	<h2>Projects</h2>
+
 </div>
 <!-- Project categories -->
 <div class="container-fluid" style="padding: 10px">
 	<div class="row text-center">
-	    <div class="col-md-2 col-md-offset-1"
-	    style="border:2px solid #cecece"><h5>ALL PROJECTS</h5></div>
-	    <div class="col-md-2"
-	    style="border:2px solid #cecece"><h5>STARTUPS</h5></div>
-	    <div class="col-md-2"
-	    style="border:2px solid #cecece"><h5>SOCIAL GOOD</h5></div>
-	    <div class="col-md-2"
-	    style="border:2px solid #cecece"><h5>RESEARCH</h5></div>
-	    <div class="col-md-2"
-	    style="border:2px solid #cecece"><h5>PM/CONSULTING</h5></div>
+
+	    <div class="col-md-2 col-md-offset-1" style="border:2px solid #cecece">
+			<h5><%= link_to "ALL PROJECTS", projects_path, class:'category'%></h5>
+			
+		</div>
+	    <div class="col-md-2" style="border:2px solid #cecece; color:red">
+			<h5><%= link_to "STARTUPS", projects_path(:category=>"Startups"), class: 'category'%></h5>
+		</div>
+	    <div class="col-md-2" style="border:2px solid #cecece">
+	    	<h5><%= link_to "SOCIAL GOOD", projects_path(:category=>"Social Good"), class: 'category'%></h5>
+	    </div>
+	    <div class="col-md-2" style="border:2px solid #cecece">
+	    	<h5><%= link_to "Research", projects_path(:category=>"Research"), class:'category'%></h5>
+	    </div>
+	    <div class="col-md-2" style="border:2px solid #cecece">
+	    	<h5><%= link_to "PM/CONSULTING", projects_path(:category=>"PM/Consulting"), class:'category'%></h5>
+	    </div>
 	</div>
 </div>
 
@@ -68,7 +76,8 @@
 								<%= image_tag(p.image, :alt => "project", :class => "img-thumbnail") %>
 								<h4 class="text-center"><%= p.title %></h4>
 								<p><%= p.summary %>
-								<%= link_to 'Read more', p.link %></p>
+									<%= link_to 'Read more', p.link %></p>
+									<%= p.category %>
 								</p>
 							</div>
 						</div>
@@ -78,4 +87,3 @@
 		</div>
 	</div>
 </div>
-

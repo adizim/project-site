@@ -24,12 +24,14 @@
     padding: 10px;
 }
 
+
+/* CSS for search bar */
 .add-on .input-group-btn > .btn {
   border-left-width:0;left:-2px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
-/* stop the glowing blue shadow */
+
 .add-on .form-control:focus {
  box-shadow:none;
  -webkit-box-shadow:none; 
@@ -42,23 +44,3 @@
   padding-top: 15px;
 }
 .navbar-nav:last-child{ border-right:0}
-/*.wrapper {
-    padding-left: 0;
-   
-}
-
-.sidebar-wrapper {
-    width: 250px;
-    z-index: 1000;
-    position: fixed;
-    left: 250px;
-    width: 100px;
-    height: 100%;
-    margin-left: -250px;
-    overflow-y: auto;
-    background: #ffffff;
-}
-
-.container {
-    margin-left: 200px;
-}*/
