@@ -9,19 +9,19 @@
 project_list = [
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Startups" ],
+  "project-robot-pic", "https://www.angilytics.com/", "Startups", ["Artificial Intelligence", "Machine Learning"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Social Good" ],
+  "project-robot-pic", "https://www.angilytics.com/", "Social Good", ["Education, Finance"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Research" ],
+  "project-robot-pic", "https://www.angilytics.com/", "Research", ["Modelling, Imaging"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "PM/Consulting" ]
+  "project-robot-pic", "https://www.angilytics.com/", "PM/Consulting", ["Entrepreneurship, Environmental"]],
 
 ]
 
-project_list.each do |title, summary, image, link, category|
-  Project.create( title: title, summary: summary, image: image, link: link, category: category )
+project_list.each do |title, summary, image, link, category, tag_list|
+  Project.create( title: title, summary: summary, image: image, link: link, category: category, tag_list: tag_list )
 end
