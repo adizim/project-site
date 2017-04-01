@@ -9,16 +9,16 @@
 project_list = [
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Startups", ["Artificial Intelligence", "Machine Learning"]],
+  "project-robot-pic", "https://www.angilytics.com/", "Startups", ["Education", "Machine Learning"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Social Good", ["Education, Finance"]],
+  "project-robot-pic", "https://www.angilytics.com/", "Social Good", ["Artificial Intelligence"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Research", ["Modelling, Imaging"]],
+  "project-robot-pic", "https://www.angilytics.com/", "Research", ["Entrepreneurship"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "PM/Consulting", ["Entrepreneurship, Environmental"]],
+  "project-robot-pic", "https://www.angilytics.com/", "PM/Consulting", ["Imaging, Environmental"]],
 
 ]
 

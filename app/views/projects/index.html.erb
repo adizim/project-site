@@ -43,19 +43,16 @@
 				<div class="sidebar-group">
 				<h5> Topics </h5>
 				<div class="checkbox">
-					<label><input type="checkbox" value="">Machine Learning</label>
+					<%= link_to "Machine Learning", projects_path(:tag=>"Machine Learning")%>
 				</div>
 				<div class="checkbox">
-					<label><input type="checkbox" value="">Public Health</label>
+					<%= link_to "Finance", projects_path(:tag=>"Finance")%>
 				</div>
 				<div class="checkbox">
-					<label><input type="checkbox" value="">Finance</label>
+					<%= link_to "Imaging", projects_path(:tag=>"Imaging")%>
 				</div>
 				<div class="checkbox">
-					<label><input type="checkbox" value="">Artificial Intelligence</label>
-				</div>
-				<div class="checkbox">
-					<label><input type="checkbox" value="">Category</label>
+					<%= link_to "Entrepreneurship", projects_path(:tag=>"Entrepreneurship")%>
 				</div>
 				<div class="checkbox">
 					<label><input type="checkbox" value="">Category</label>
@@ -63,6 +60,10 @@
 				<div class="checkbox">
 					<label><input type="checkbox" value="">Category</label>
 				</div>
+				<div class="checkbox">
+					<label><input type="checkbox" value="">Category</label>
+				</div>
+				<form>
 			</div>
 		</div>
 	</div>
