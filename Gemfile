@@ -43,6 +43,12 @@ gem 'bootstrap-sass', '3.3.7'
 # Use for tagging projects
 gem 'acts-as-taggable-on', '~> 4.0'
 
+<<<<<<< HEAD
+=======
+# Use for user login
+gem 'devise'
+
+>>>>>>> e58172a5d2266add04b27363a2b1111fb5f8b86e
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
