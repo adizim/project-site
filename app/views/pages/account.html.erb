@@ -6,11 +6,11 @@
 	<!-- Device Login -->
 	<ul>
     <% if user_signed_in? %>
-    	<h2> USER signed in</h2>
+    	<h2> USER signed in!</h2>
         <li><%= link_to 'Edit Profile', edit_user_registration_path%></li>
         <li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
     <% elsif admin_signed_in? %>
-    	<h2> ADMIN signed in</h2>
+    	<h2> ADMIN signed in!</h2>
     	<li><%= link_to 'Edit Profile', edit_admin_registration_path%></li>
     	<li><%= link_to 'Log Out', destroy_admin_session_path, method: :delete%></li>
     <% else %>
