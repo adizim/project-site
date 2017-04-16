@@ -4,6 +4,7 @@ class ProjectsController < ApplicationController
 	def index
 		if params[:adminID]
 			@projects = Project.where(:adminID => params[:adminID])
+			render 'admin_index'
 		elsif params[:category]
 			@projects = Project.where(:category => params[:category])
 		elsif params[:tag]
