@@ -2,31 +2,19 @@
 	<div class="row">
 	 	<h3 class="text-center">Create Project</h3>
 	 	<div class="col-md-4 col-md-offset-4">
-			<%= form_for :project, url: projects_path do |f| %>
-				<div class="form-group">
-					<%= f.label :title%>
-					<%= f.text_field :title, class: "form-control"%>
-				</div>
+	 		<%= simple_form_for :project, url: projects_path do |f| %>
+	 			<%= f.input :title, placeholder: 'Enter Project Title' %>
+	 			<%= f.input :summary, placeholder: 'Brief Description' %>
+	 			<%= f.input :image, as: :file, wrapper: :vertical_file_input %>
+	 			<%= f.input :link, placeholder: 'Enter website' %>
+	 			<%= f.input :category, as: :radio_buttons,
+    collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
+    			<%= f.input :tag_list, as: :check_boxes,
+    collection: ['Machine Learning', 'Entrepreneruship', 'Finance', 'Imaging'], wrapper: :vertical_radio_and_checkboxes %>
 
-				<div class="form-group">
-					<%= f.label :summary %>
-					<%= f.text_area :summary, class: "form-control" %>
-				</div>
+    			<%= f.button :submit %>
 				
-				<div class="form-group">
-					<%= f.label :link %>
-					<%= f.text_field :link, class: "form-control" %>
-				</div>
-
-				<%-#temp solution - need to implement paperclip for image uploadss-%>
-				<div class="form-group">
-					<%= f.label :image %>
-					<%= f.text_field :image, class: "form-control" %>
-				</div>
-				<p>
-			    	<%= f.submit 'Submit', class: "btn btn-default" %>
-			  	</p>
-			<% end %>
+	 		<% end %>
 		</div>
 	</div>
 </div>

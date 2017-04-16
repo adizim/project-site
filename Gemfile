@@ -40,6 +40,9 @@ gem 'devise'
 # Bootstrap Gem
 gem 'bootstrap-sass', '3.3.7'
 
+# Bootstrap Form gem
+gem 'simple_form'
+
 # Use for tagging projects
 gem 'acts-as-taggable-on', '~> 4.0'
 
