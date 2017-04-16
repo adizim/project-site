@@ -1,25 +1,32 @@
-<%= form_for :project, url: projects_path do |f| %>
-	<div class="form-group">
-		<%= f.label :title%>
-		<%= f.text_field :title%>
-	</div>
+<div class="container">
+	<div class="row">
+	 	<h3 class="text-center">Create Project</h3>
+	 	<div class="col-md-4 col-md-offset-4">
+			<%= form_for :project, url: projects_path do |f| %>
+				<div class="form-group">
+					<%= f.label :title%>
+					<%= f.text_field :title, class: "form-control"%>
+				</div>
 
-	<div class="form-group">
-		<%= f.label :summary %>
-		<%= f.text_field :summary %>
-	</div>
-	
-	<div class="form-group">
-		<%= f.label :link %>
-		<%= f.text_field :link %>
-	</div>
+				<div class="form-group">
+					<%= f.label :summary %>
+					<%= f.text_area :summary, class: "form-control" %>
+				</div>
+				
+				<div class="form-group">
+					<%= f.label :link %>
+					<%= f.text_field :link, class: "form-control" %>
+				</div>
 
-	<%-# need to implement paperclip for image uploadss-%>
-	<div class="form-group">
-		<%= f.label :image %>
-		<%= f.text_field :image %>
+				<%-#temp solution - need to implement paperclip for image uploadss-%>
+				<div class="form-group">
+					<%= f.label :image %>
+					<%= f.text_field :image, class: "form-control" %>
+				</div>
+				<p>
+			    	<%= f.submit 'Submit', class: "btn btn-default" %>
+			  	</p>
+			<% end %>
+		</div>
 	</div>
-	<p>
-    	<%= f.submit %>
-  	</p>
-<% end %>
+</div>
