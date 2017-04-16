@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
 
+	before_action :authenticate_admin!, :except => [:show, :index]
 	def index
 		if params[:category]
 			@projects = Project.where(:category => params[:category])
@@ -15,11 +16,7 @@ class ProjectsController < ApplicationController
 	end 
 
 	def new
-		if not admin_signed_in?
-			flash[:error] = "unauthorized access"
-		else
-			@project = Project.new
-		end
+		@project = Project.new
 	end
 
 	def create
