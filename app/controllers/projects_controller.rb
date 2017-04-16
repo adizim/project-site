@@ -20,11 +20,11 @@ class ProjectsController < ApplicationController
 	def create
 		@project = Project.new(project_params)
 		@project.save
-		redirect_to new_project_path
+		redirect_to project_path(@project.id)
 	end
 
 	private
 		def project_params
-			params.require(:project).permit(:title, :summary)
+			params.require(:project).permit(:title, :summary, :link, :image)
 		end 
 end
