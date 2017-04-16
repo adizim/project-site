@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
 
 	def new
 		@project = Project.new
+		@id = current_admin.id
 	end
 
 	def create
@@ -31,6 +32,6 @@ class ProjectsController < ApplicationController
 
 	private
 		def project_params
-			params.require(:project).permit(:title, :summary, :link, :image)
+			params.require(:project).permit(:title, :summary, :link, :image, :adminID)
 		end 
 end
