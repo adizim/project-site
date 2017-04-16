@@ -14,7 +14,25 @@
 
     			<%= f.button :submit %>
 				
+<<<<<<< HEAD
 	 		<% end %>
+=======
+				<div class="form-group">
+					<%= f.label :link %>
+					<%= f.text_field :link, class: "form-control" %>
+				</div>
+
+				<%-#temp solution - need to implement paperclip for image uploadss-%>
+				<div class="form-group">
+					<%= f.label :image %>
+					<%= f.text_field :image, class: "form-control" %>
+				</div>
+				<%= f.hidden_field :adminID, :value => @id %>
+				<p>
+			    	<%= f.submit 'Submit', class: "btn btn-default" %>
+			  	</p>
+			<% end %>
+>>>>>>> 0e3b5d5d990b38218a7c97f80ddd29021a08a7c7
 		</div>
 	</div>
 </div>
