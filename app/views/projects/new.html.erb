@@ -1,0 +1,25 @@
+<%= form_for :project, url: projects_path do |f| %>
+	<div class="form-group">
+		<%= f.label :title%>
+		<%= f.text_field :title%>
+	</div>
+
+	<div class="form-group">
+		<%= f.label :summary %>
+		<%= f.text_field :summary %>
+	</div>
+	
+	<div class="form-group">
+		<%= f.label :link %>
+		<%= f.text_field :link %>
+	</div>
+
+	<%-#temp solution - need to implement paperclip for image uploadss-%>
+	<div class="form-group">
+		<%= f.label :image %>
+		<%= f.text_field :image %>
+	</div>
+	<p>
+    	<%= f.submit %>
+  	</p>
+<% end %>
