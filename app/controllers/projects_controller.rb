@@ -2,7 +2,9 @@ class ProjectsController < ApplicationController
 
 	before_action :authenticate_admin!, :except => [:show, :index]
 	def index
-		if params[:category]
+		if params[:adminID]
+			@projects = Project.where(:adminID => params[:adminID])
+		elsif params[:category]
 			@projects = Project.where(:category => params[:category])
 		elsif params[:tag]
 			@projects = Project.tagged_with(params[:tag])
