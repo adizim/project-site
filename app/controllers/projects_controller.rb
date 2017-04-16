@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+
 	def index
 		if params[:category]
 			@projects = Project.where(:category => params[:category])
@@ -14,13 +15,21 @@ class ProjectsController < ApplicationController
 	end 
 
 	def new
-		@project = Project.new
+		if not admin_signed_in?
+			flash[:error] = "unauthorized access"
+		else
+			@project = Project.new
+		end
 	end
 
 	def create
 		@project = Project.new(project_params)
-		@project.save
-		redirect_to project_path(@project.id)
+		if @project.save
+			flash[:success] = "New Project Created!"
+			redirect_to project_path(@project.id)
+		else
+			render 'new'
+		end
 	end
 
 	private
