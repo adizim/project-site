@@ -74,8 +74,11 @@
 				<% @projects.each do |p| %>
 					<div class="col-md-6">
 						<div class="square">
-							
-							<%= image_tag(p.image, :alt => "project", :class => "img-thumbnail") %>
+							<% if p.image.exists? %>
+								<%= image_tag(p.image.url(:robot), :alt => "project", :class => "img-thumbnail") %>
+							<% else %>
+								<%= image_tag 'project-robot-pic.jpg', :class => "img-thumbnail" %>
+							<% end %>
 							<h4 class="text-center"><%= p.title %></h4>
 							<p><%= p.summary %>
 								<%= link_to 'Read more', p.link %></p>

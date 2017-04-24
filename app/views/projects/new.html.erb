@@ -3,16 +3,18 @@
 	 	<h3 class="text-center">Create Project</h3>
 	 	<div class="col-md-4 col-md-offset-4">
 	 		<%= simple_form_for :project, url: projects_path do |f| %>
-	 			<%= f.input :title, placeholder: 'Enter Project Title' %>
+	 			<%= f.input :title, placeholder: 'Enter Project Title', required: true %>
 	 			<%= f.input :summary, placeholder: 'Brief Description' %>
-	 			<%= f.input :image, as: :file, wrapper: :vertical_file_input %>
+	 			<%= f.input :image, as: :file, required: false %>
 	 			<%= f.input :link, placeholder: 'Enter website' %>
 	 			<%= f.input :category, as: :radio_buttons,
     collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
     			<%= f.input :tag_list, as: :check_boxes,
     collection: ['Machine Learning', 'Entrepreneruship', 'Finance', 'Imaging'], wrapper: :vertical_radio_and_checkboxes %>
-
+    			<%= f.hidden_field :adminID, :value => @id %>
     			<%= f.button :submit %>
+	 		<% end %>
+
 		</div>
 	</div>
 </div>
