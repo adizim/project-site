@@ -10,11 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170423231830) do
-=======
 ActiveRecord::Schema.define(version: 20170423235139) do
->>>>>>> 318ae5e6c2bd5fd5f765b72e1559a9a9628132f8
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -51,14 +47,11 @@ ActiveRecord::Schema.define(version: 20170423235139) do
     t.datetime "updated_at",         null: false
     t.string   "category"
     t.integer  "adminID"
-<<<<<<< HEAD
     t.string   "image_file_name"
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
-=======
     t.text     "questions"
->>>>>>> 318ae5e6c2bd5fd5f765b72e1559a9a9628132f8
   end
 
   create_table "taggings", force: :cascade do |t|

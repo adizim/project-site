@@ -6,7 +6,7 @@
 	 			<%= f.input :title, placeholder: 'Enter Project Title', required: true %>
 	 			<%= f.input :summary, placeholder: 'Brief Description' %>
 	 			<%= f.input :image, as: :file, required: false %>
-	 			<%= f.input :link, placeholder: 'Enter website' %>
+	 			<%= f.input :link, as: :url, placeholder: 'Enter website' %>
 	 			<%= f.input :category, as: :radio_buttons,
     collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
     			<%= f.input :tag_list, as: :check_boxes,
