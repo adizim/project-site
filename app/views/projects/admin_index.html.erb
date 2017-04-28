@@ -1,10 +1,12 @@
 <h2>ADMIN INDEX PAGE</h2>
 <h4>You currently have <%=@projects.count%> projects </h4>
-<%= @projects.each do |p| %>
-	<p><%= p.title %></p>
-	<p><%= p.summary %></p>
-	<p><%= p.link %></p>
-	<p><%= p.image %></p>
-	<p><%= p.category %></p>
+<% @projects.each do |p| %>
+	<tr>
+	    <td><%= p.title %></td>
+	    <td><%= p.summary %></td>
+	    <td><%= p.link %></td>
+	    <td><%= p.image %></td>
+	    <td><%= p.category %></td>
+  	</tr>
 	<hr>
 <% end %>

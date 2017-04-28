@@ -3,10 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
   get 'about', to: "pages#about"
-  get 'contact', to: "pages#contact"
+  get 'contact', to: "contacts#new"
   get 'apply', to: "pages#apply"
   get 'account', to: "pages#account"
   resources :projects
+  resources "contacts", only: [:new, :create]
 
   get 'tags/:tag', to:'projects#index', as: :tag 
 
