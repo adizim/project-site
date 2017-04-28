@@ -2,6 +2,7 @@
 	<div class="row">
 	 	<h3 class="text-center">Create Project</h3>
 	 	<div class="col-md-4 col-md-offset-4">
+	 		
 	 		<%= simple_form_for :project, url: projects_path do |f| %>
 	 			<%= f.input :title, placeholder: 'Enter Project Title', required: true %>
 	 			<%= f.input :summary, placeholder: 'Brief Description' %>
@@ -11,11 +12,13 @@
     collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
     			<%= f.input :tag_list, as: :check_boxes,
     collection: ['Machine Learning', 'Entrepreneruship', 'Finance', 'Imaging'], wrapper: :vertical_radio_and_checkboxes %>
-    			<%= f.input :questions, as: :text %>
+    			<%= f.input :question1, as: :text, required: false %>
+    			<%= f.input :question2, as: :text, required: false %>
+    			<%= f.input :question3, as: :text, required: false %>
     			<%= f.hidden_field :adminID, :value => @id %>
     			<%= f.button :submit %>
 	 		<% end %>
-
+			
 		</div>
 	</div>
 </div>
