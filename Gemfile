@@ -43,6 +43,9 @@ gem 'bootstrap-sass', '3.3.7'
 # Bootstrap Form gem
 gem 'simple_form'
 
+# Simple Form Mailform
+gem 'mail_form'
+
 # Paperclip
 gem "paperclip", "~> 5.0.0"
 

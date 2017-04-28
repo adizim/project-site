@@ -11,7 +11,7 @@
     collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
     			<%= f.input :tag_list, as: :check_boxes,
     collection: ['Machine Learning', 'Entrepreneruship', 'Finance', 'Imaging'], wrapper: :vertical_radio_and_checkboxes %>
-    			<%= f.input :questions, as: :text %>
+    			<%= f.input_field :questions, :name => "questions[]" %>
     			<%= f.hidden_field :adminID, :value => @id %>
     			<%= f.button :submit %>
 	 		<% end %>
