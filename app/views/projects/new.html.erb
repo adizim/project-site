@@ -10,7 +10,7 @@
 	 			<%= f.input :link, as: :url, placeholder: 'Enter website' %>
 	 			<%= f.input :category, as: :radio_buttons,
     collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
-    			<%= f.input :tag_list, as: :check_boxes,
+    			<%= f.input :tag_list, as: :check_boxes, required: false,
     collection: ['Machine Learning', 'Entrepreneruship', 'Finance', 'Imaging'], wrapper: :vertical_radio_and_checkboxes %>
     			<%= f.input :question1, as: :text, placeholder: 'Ex. What are you passionate about?', required: true, label: 'First Question' %>
     			<%= f.input :question2, as: :text, placeholder: 'Ex. Why do you want to work for us?', required: true, label: 'Second Question' %>
