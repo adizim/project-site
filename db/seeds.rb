@@ -9,16 +9,16 @@
 project_list = [
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Startups", ["Education", "Machine Learning"], "Why do you want to work for a startup?"],
+  "project-robot-pic", "https://www.angilytics.com/", "Startups", ["Education", "Machine Learning"], ["Why do you want to work for a startup?"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Social Good", ["Artificial Intelligence"], "Why do you want to work for a startup?"],
+  "project-robot-pic", "https://www.angilytics.com/", "Social Good", ["Artificial Intelligence"], ["Why do you want to work for a startup?"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "Research", ["Entrepreneurship"], "Why do you want to work for a startup?"],
+  "project-robot-pic", "https://www.angilytics.com/", "Research", ["Entrepreneurship"], ["Why do you want to work for a startup?"]],
   [ "Angilytics",
   "Angilytics creates wearable sensors and artificial intelligence for optimal management of costly heart diseases.",
-  "project-robot-pic", "https://www.angilytics.com/", "PM/Consulting", ["Imaging, Environmental"], "Why do you want to work for a startup?"],
+  "project-robot-pic", "https://www.angilytics.com/", "PM/Consulting", ["Imaging, Environmental"], ["Why do you want to work for a startup?"]]
 
 ]
 

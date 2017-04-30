@@ -2,6 +2,7 @@
 	<div class="row">
 	 	<h3 class="text-center">Create Project</h3>
 	 	<div class="col-md-4 col-md-offset-4">
+	 		
 	 		<%= simple_form_for :project, url: projects_path do |f| %>
 	 			<%= f.input :title, placeholder: 'Enter Project Title', required: true %>
 	 			<%= f.input :summary, placeholder: 'Brief Description' %>
@@ -11,11 +12,14 @@
     collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
     			<%= f.input :tag_list, as: :check_boxes,
     collection: ['Machine Learning', 'Entrepreneruship', 'Finance', 'Imaging'], wrapper: :vertical_radio_and_checkboxes %>
-    			<%= f.input_field :questions, :name => "questions[]" %>
+    			<%= f.input :question1, as: :text, placeholder: 'Ex. What are you passionate about?', required: true, label: 'First Question' %>
+    			<%= f.input :question2, as: :text, placeholder: 'Ex. Why do you want to work for us?', required: true, label: 'Second Question' %>
+    			<%= f.input :question3, as: :text, placeholder: 'Ex. Tell us about a difficult team member.', required: true, label: 'Third Question' %>
+    			<%= f.input :skills, as: :text, placeholder: 'Ex. Python Java Ruby etc.', label: 'Add recommended Skills seperated by spaces' %>
+    			<%= f.input :courses, placeholder: 'Ex. CS61B CS189',as: :text, label: 'Add your recommended Courses seperated by spaces' %>
     			<%= f.hidden_field :adminID, :value => @id %>
     			<%= f.button :submit %>
 	 		<% end %>
-
 		</div>
 	</div>
 </div>
