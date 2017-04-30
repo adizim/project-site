@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170430220456) do
+ActiveRecord::Schema.define(version: 20170430231336) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -27,15 +27,6 @@ ActiveRecord::Schema.define(version: 20170430220456) do
     t.datetime "updated_at",                          null: false
     t.index ["email"], name: "index_admins_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
-  end
-
-  create_table "applications", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer  "user_id"
-    t.integer  "project_id"
-    t.index ["project_id"], name: "index_applications_on_project_id"
-    t.index ["user_id"], name: "index_applications_on_user_id"
   end
 
   create_table "contacts", force: :cascade do |t|
@@ -61,6 +52,15 @@ ActiveRecord::Schema.define(version: 20170430220456) do
     t.text     "question3"
     t.string   "skills"
     t.string   "courses"
+  end
+
+  create_table "student_applications", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "project_id"
+    t.index ["project_id"], name: "index_student_applications_on_project_id"
+    t.index ["user_id"], name: "index_student_applications_on_user_id"
   end
 
   create_table "taggings", force: :cascade do |t|

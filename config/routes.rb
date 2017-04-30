@@ -6,7 +6,10 @@ Rails.application.routes.draw do
   get 'contact', to: "contacts#new"
   get 'apply', to: "pages#apply"
   get 'account', to: "pages#account"
-  resources :projects
+  resources :projects do
+    resources :student_applications do
+    end
+  end
   resources "contacts", only: [:new, :create]
 
   get 'tags/:tag', to:'projects#index', as: :tag 

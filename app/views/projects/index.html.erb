@@ -85,7 +85,9 @@
 								<h6><%= p.category %></h6>
 								<h6><%= raw p.tag_list.map{|t| link_to t, tag_path(t)}.join(', ') %></h6>
 							</p>
-							
+							<p>
+								<%= link_to 'Apply', new_project_student_application_path(p.id) %>
+							</p>
 						</div>
 					</div>
 				<% end %>
