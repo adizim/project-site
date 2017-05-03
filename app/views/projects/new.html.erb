@@ -12,11 +12,11 @@
     collection: ['Startups', 'PM/Consulting', 'Research', 'Social Good'], wrapper: :vertical_radio_and_checkboxes %>
     			<%= f.input :tag_list, as: :check_boxes, required: false,
     collection: ['Machine Learning', 'Entrepreneruship', 'Finance', 'Imaging'], wrapper: :vertical_radio_and_checkboxes %>
-    			<%= f.input :question1, as: :text, placeholder: 'Ex. What are you passionate about?', required: true, label: 'First Question' %>
-    			<%= f.input :question2, as: :text, placeholder: 'Ex. Why do you want to work for us?', required: true, label: 'Second Question' %>
-    			<%= f.input :question3, as: :text, placeholder: 'Ex. Tell us about a difficult team member.', required: true, label: 'Third Question' %>
+    			<%= f.input :question1, as: :text, placeholder: 'Ex. What are you passionate about?', required: false, label: 'First Question' %>
+    			<%= f.input :question2, as: :text, placeholder: 'Ex. Why do you want to work for us?', required: false, label: 'Second Question' %>
+    			<%= f.input :question3, as: :text, placeholder: 'Ex. Tell us about a difficult team member.', required: false, label: 'Third Question' %>
     			<%= f.input :skills, as: :text, placeholder: 'Ex. Python Java Ruby etc.', label: 'Add recommended Skills seperated by spaces' %>
-    			<%= f.input :courses, placeholder: 'Ex. CS61B CS189',as: :text, label: 'Add your recommended Courses seperated by spaces' %>
+    			<%= f.input :courses, placeholder: 'Ex. CS61B CS189',as: :text, label: 'Add your recommended Courses seperated by spaces', required: false %>
     			<%= f.hidden_field :adminID, :value => @id %>
     			<%= f.button :submit %>
 	 		<% end %>
